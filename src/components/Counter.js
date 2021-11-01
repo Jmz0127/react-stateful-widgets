@@ -49,15 +49,17 @@ STEP 6:
 import React, { useState } from 'react'; /* STEP 0 */ // added state hook here in the {}
 
 export default function Counter() {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(2);
     // count and setCount pair and initialized with zero
   /* STEP 1 */
 
   const increment = () => {
     /* STEP 4 */
+    setCount(count + 1)
   };
   const decrement = () => {
     /* STEP 5 */
+    setCount(count - 1)
   };
   const reset = () => {
     /* STEP 6 */
@@ -76,7 +78,8 @@ export default function Counter() {
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>  
-        Number {count} is {count % 2 === 0 ? 'Even' : 'Odd'} 
+        Number {count} is {count % 2 === 0 ? 'Even' : 'Odd'} {/* STEP 3 */}
+        
         
         
       </div>
@@ -84,7 +87,7 @@ export default function Counter() {
         <button id='increment' onClick={increment}>Increment</button>
         <button id='decrement' onClick={decrement}>Decrement</button>
         <button id='resetCount' onClick={reset}>Reset</button>
-      </div>
+      </div> 
     </div>
   );
 }
