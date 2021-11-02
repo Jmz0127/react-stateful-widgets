@@ -20,3 +20,6 @@ render(
   ,
   document.querySelector('#root')
 );
+
+
+// can only return one thing in a function but can return multiple things one time. in this case above its one div with a bunch of stuff in it
